@@ -57,7 +57,9 @@
       <?php foreach ($hotel as $key => $value): ?>
 
       <li>
-        <?php echo str_replace('_', ' ', $key) . ': ' . $value?>
+        <!-- Se la chiave non è "parking allora mostra il valore originale" -->
+        <!-- se è parking se è true = si se è false = no (true / false sono prensenti gia in array-->
+        <?php echo str_replace('_', ' ', $key) . ': ' . ($key === 'parking' ? ($value ? 'Si' : 'No') : $value);?>
       </li>
 
       <?php endforeach; ?>
