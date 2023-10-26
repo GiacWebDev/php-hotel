@@ -57,7 +57,7 @@
       <?php foreach ($hotel as $key => $value): ?>
 
       <li>
-        <?php echo str_replace('_', ' ', $key) ?>
+        <?php echo str_replace('_', ' ', $key) . ': ' . $value?>
       </li>
 
       <?php endforeach; ?>
